@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>résumé</title>
+  <title>show me the code</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
@@ -10,7 +10,7 @@
 <body>
   <div class="container">
     <div class="header">
-      <h1>résumé</h1>
+      <h1>sharon woo</h1>
       <a href="mailto:sharon.woo.2017@mitb.smu.edu.sg" class="link-button">contact me</a>
       <div class='counter-format'>
         <div class='counter-number'>couldn't display views</div>
@@ -18,33 +18,23 @@
       <hr class="top-margin">
     </div>
     <div class="main">
-      <h2>skills, languages and demo projects by cloud provider / frameworks</h2>
+      <h2>show me the code - public portfolio</h2>
       <ul>
-        <li>languages: python, sql, javascript, bit of ruby (thanks to <a href="https://github.com/sharonwoo/sharonwoo.github.io">blog</a>); 
-                       english (native), mandarin (native), japanese (jlpt n3)</li>
-          <li>aws: redshift, s3, cloudfront, lambda, dynamodb</li>
-            <ul>
-              <li>s3, cloudfront, lambda: this project; domain from namecheap + ssl cert generated with acm</li>
-              <li>lambda: built a telegram bot to spam myself with hourly details of my last played track. bot is now offline because i now subscribe to youtube/music instead</li>
-              <li>redshift: my job - created some tables and wrote tests</li>
-            </ul>
-          <li>gcp: cloud bucket, bigquery</li>
-            <ul>
-              <li><a href="https://www.youtube.com/watch?v=FBkTt9GJbxM">job scraper</a> - scraping on a raspberry pi with selenium, job descriptions dumped to cloud bucket; 
-                working on loading to bigquery and visualisation. previous use case required local storage and visualisation in tableau.</li>
-              <li>bigquery etl (<a href="https://github.com/sharonwoo/bigquery-takehome">repo</a>): toy etl for data warehouse with staging and production projects, 
-                  with single business logic layer. used github actions to manage CICD for tables - pull request would check if business logic and tables generated correctly in staging, 
-                  and merge to main (which is only possible with codeowner review) would automatically generate tables in production.
-              </li>
-            </ul>
-          <li>django/django-rest-framework + docker (<a href="https://github.com/sharonwoo/grant-household-api-docker">repo</a>): backend web api with authentication</li>
-          <li>flask: tool to diff transcripts to evaluate effectiveness of machine transcription against a verified human-transcribed sourcce, now down due to heroku change of policy</li>
+        <li>this site (<a href="https://github.com/sharonwoo/studious-enigma">repo</a>): hosted on aws (s3, cloudfront, lambda, dynamodb). domain from namecheap + ssl cert generated with acm</li>
+        <li>job scraper (<a href="https://www.youtube.com/watch?v=FBkTt9GJbxM">juniordevsg talk</a>) - cron orchestrated linux box hosted scraping on a raspberry pi with selenium, job descriptions dumped to cloud bucket; 
+            working on loading to bigquery and visualisation. previous use case required local storage and visualisation in tableau.</li>
+        <li>bigquery etl (<a href="https://github.com/sharonwoo/bigquery-takehome">repo</a>): toy etl for data warehouse with staging and production projects, 
+            with single business logic layer. used github actions to manage CICD for tables - pull request would check if business logic and tables generated correctly in staging, 
+            and merge to main (which is only possible with codeowner review) would automatically generate tables in production.</li>
+        <li>django/django-rest-framework + docker (<a href="https://github.com/sharonwoo/grant-household-api-docker">repo</a>): backend web api with authentication</li>
+        <li>flask + bootstrap + heroku (<a href="https://github.com/sharonwoo/word-error-rate-tool-v1">repo</a>): tool to diff transcripts to evaluate effectiveness 
+            of machine transcription against a verified human-transcribed sourcce, now down due to heroku change of policy</li>
       </ul>
       <h2>experience</h2>
       <h3 class="job-title">senior data analyst, rakuten viki (2022 - present)</h3>
       <ul>
         <li>Working with data engineering to architect new data models and pipelines serving reports on Looker, as well as appropriate governance policies and documentation, 
-            and a migration strategy from existing data lake which has neither layers nor documentation and which transformations are encoded in a mix of Ruby, SQL, and Scala.
+            and a migration strategy from existing data lake which has neither layers nor documentation and which transformations are encoded in a mix of Ruby, SQL (SparkSQL/Redshift SQL), and Scala.
             <ul>
               <li class="extra-margin">Proposed augmentations include an ERD, a 4 layer data warehouse with dimensional modelling, proper CICD pipeline, a sandbox for adhocs, etc.</li>
               <li>Experimented with tools such as dbt, CICD with Github Actions.</li>
