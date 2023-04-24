@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>résumé</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="anya.ico">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>résumé</h1>
+      <a href="mailto:sharon.woo.2017@mitb.smu.edu.sg" class="link-button">contact me</a>
+      <div class='counter-format'>
+        <div class='counter-number'>couldn't display views</div>
+      </div>
+      <hr class="top-margin">
+    </div>
+    <div class="main">
+      <h2>skills, languages and demo projects by cloud provider / frameworks</h2>
+      <ul>
+        <li>languages: python, sql, javascript, bit of ruby (thanks to <a href="https://github.com/sharonwoo/sharonwoo.github.io">blog</a>); 
+                       english (native), mandarin (native), japanese (jlpt n3)</li>
+          <li>aws: redshift, s3, cloudfront, lambda, dynamodb</li>
+            <ul>
+              <li>s3, cloudfront, lambda: this project; domain from namecheap + ssl cert generated with acm</li>
+              <li>lambda: built a telegram bot to spam myself with hourly details of my last played track. bot is now offline because i now subscribe to youtube/music instead</li>
+              <li>redshift: my job - created some tables and wrote tests</li>
+            </ul>
+          <li>gcp: cloud bucket, bigquery</li>
+            <ul>
+              <li><a href="https://www.youtube.com/watch?v=FBkTt9GJbxM">job scraper</a> - scraping on a raspberry pi with selenium, job descriptions dumped to cloud bucket; 
+                working on loading to bigquery and visualisation. previous use case required local storage and visualisation in tableau.</li>
+              <li>bigquery etl (<a href="https://github.com/sharonwoo/bigquery-takehome">repo</a>): toy etl for data warehouse with staging and production projects, 
+                  with single business logic layer. used github actions to manage CICD for tables - pull request would check if business logic and tables generated correctly in staging, 
+                  and merge to main (which is only possible with codeowner review) would automatically generate tables in production.
+              </li>
+            </ul>
+          <li>django/django-rest-framework + docker (<a href="https://github.com/sharonwoo/grant-household-api-docker">repo</a>): backend web api with authentication</li>
+          <li>flask: tool to diff transcripts to evaluate effectiveness of machine transcription against a verified human-transcribed sourcce, now down due to heroku change of policy</li>
+      </ul>
+      <h2>experience</h2>
+      <h3 class="job-title">senior data analyst, rakuten viki (2022 - present)</h3>
+      <ul>
+        <li>Working with data engineering to architect new data models and pipelines serving reports on Looker, as well as appropriate governance policies and documentation, 
+            and a migration strategy from existing data lake which has neither layers nor documentation and which transformations are encoded in a mix of Ruby, SQL, and Scala.
+            <ul>
+              <li class="extra-margin">Proposed augmentations include an ERD, a 4 layer data warehouse with dimensional modelling, proper CICD pipeline, a sandbox for adhocs, etc.</li>
+              <li>Experimented with tools such as dbt, CICD with Github Actions.</li>
+            </ul>
+        </li>
+        <li>Ensured existing legacy reports worked through infrastructure migration (Redshift) less than a month after I joined 
+            by devising tests and maintained reporting tables both as author and reviewer of code. Implemented tests when modifying tables.
+        </li>
+        <li>Saved significant engineering resources upon discovery that a SaaS mobile marketing analytics and attribution platform integration 
+            with a third-party payments platform (ongoing migration) was not needed per end-user analytics requirements which were previously wrongly scoped - 
+            partially contributing to release being brought forward a month.
+        </li>
+      </ul>
+      <h3 class="job-title top-margin">manager, apac marketing analytics, foodpanda singapore (2021 - 2022)</h3>
+      <p class="job-title no-margin">ic2 (2021) | promoted to ic3 (2022)
+      <ul>
+        <li>Developed and maintained daily Tableau reports involving data transformation, pipelining and validation of terabyte-scale order, session, customer data in BigQuery warehouse, 
+            in support of growth initiatives on the platform across different business verticals. 
+            <ul>
+                <li class="extra-margin">Pipelines orchestrated with Airflow and dbt, with tests in pytest and checks in CICD pipeline ensuring quality of code. </li>
+                <li>Participated in code reviews of data pipelines (e.g. table tracking incentive costs by type) as well as projects such as machine learning models as author and reviewer. 
+                    As my job scope spanned verticals, I worked with dozens of both technical and nontechnical stakeholders to ensure reporting and analysis remained aligned.
+                </li>
+            </ul>
+        </li>
+        <li>Supported improvements to data quality through continual data migrations (e.g. new features). 
+            Highest impact discovery and bug fix: data quality issue affecting ~20% of incentive spend (€x0m impact). 
+        <li>Deep dive analyses supporting growth initiatives scaling from thousands of daily orders to 100x that in a year. 
+        </li>
+        <li>Conducted training on SQL for business users and wrote documentation on Confluence e.g. on data models and pipelines 
+            organically adopted by hundreds of users.
+        </li>
+        <li>Weekly JIRA planning for initial team of 8 business users; after promotion managed team of 2 dedicated data resources.</li>
+      </ul>
+      <h3 class="job-title">data scientist, home team science and technology agency(2019 - 2020)</h3>
+      <ul>
+        <li>Machine learning models: speech recognition (Kaldi, deepspeech, etc), time series (Prophet) across a variety of domains, mostly transfer learning. 
+          Evaluated effectiveness of AutoML products such as DataRobot.
+        </li>
+        <li>Wrangled local Ubuntu environments to get them to work with CUDA until NVIDIA backordered A100s slated to arrive.
+        </li>
+        <li>Built some Flask web apps and extended open source NLP packages to do <i>stuff</i>.
+        </li>
+      </ul>
+      <h2>education</h2>
+      <ul>
+        <li>masters of information technology in business (artificial intelligence), singapore management university</li>
+        <ul>
+          <li class="extra-margin">scholarship student and teaching assistant for applied statistics class</li>
+        </ul>
+        <li>bachelor's degree in finance, national university of singapore</li>
+      </ul>
+    <!-- end main div -->
+    </div> 
+  </div>
+  <script src='./script.js'></script>
+</body>
+</html>
