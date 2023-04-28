@@ -13,7 +13,7 @@
       <h1>sharon woo</h1>
       <a href="mailto:sharon.woo.2017@mitb.smu.edu.sg" class="link-button">contact me</a>
       <div class='counter-format'>
-        <div class='counter-number'>couldn't display views</div>
+        <div class='counter-number'>view counter loading</div>
       </div>
       <hr class="top-margin">
     </div>
@@ -21,12 +21,15 @@
       <h2>show me the code - public portfolio</h2>
       <ul>
         <li>this site (<a href="https://github.com/sharonwoo/studious-enigma">repo</a>): hosted on aws (s3, cloudfront, lambda, dynamodb). domain from namecheap + ssl cert generated with acm</li>
-        <li>job scraper (<a href="https://www.youtube.com/watch?v=FBkTt9GJbxM">juniordevsg talk</a>) - cron orchestrated linux box hosted scraping on a raspberry pi with selenium, job descriptions dumped to cloud bucket; 
-            working on loading to bigquery and visualisation. previous use case required local storage and visualisation in tableau.</li>
-        <li>bigquery etl (<a href="https://github.com/sharonwoo/bigquery-takehome">repo</a>): toy etl for data warehouse with staging and production projects, 
-            with single business logic layer. used github actions to manage CICD for tables - pull request would check if business logic and tables generated correctly in staging, 
-            and merge to main (which is only possible with codeowner review) would automatically generate tables in production.</li>
-        <li>django/django-rest-framework + docker (<a href="https://github.com/sharonwoo/grant-household-api-docker">repo</a>): backend web api with authentication</li>
+        <li>job scraper (<a href="https://www.youtube.com/watch?v=FBkTt9GJbxM">juniordevsg talk</a>) - cron orchestrated scraping on a raspberry pi with python selenium, 
+            job descriptions dumped to cloud bucket; working on refactoring for improved performance / reduced storage and loading to bigquery and visualisation. also more tests, now i just 
+            manually go through the logs lol. previous use case required local storage and visualisation in tableau.</li>
+        <li>bigquery etl (<a href="https://github.com/sharonwoo/bigquery-takehome">repo</a>): toy bigquery data warehouse with staging and production projects, 
+            with single business logic layer in each. github actions to manage CICD for tables - pull request checks if business logic generates tables correctly in staging based 
+            (integration tests in pytest checks biggquery etl and table columns, shape and contents are correct). 
+            upon merge to main, only possible with codeowner review (aka i'm the bad guy, it's me), automatically generates tables in production.</li>
+        <li>django/django-rest-framework + docker (<a href="https://github.com/sharonwoo/grant-household-api-docker">repo</a>): backend web api with authentication. 
+            simple unit and integration tests in pytest.</li>
         <li>flask + bootstrap + heroku (<a href="https://github.com/sharonwoo/word-error-rate-tool-v1">repo</a>): tool to diff transcripts to evaluate effectiveness 
             of machine transcription against a verified human-transcribed sourcce, now down due to heroku change of policy</li>
       </ul>
@@ -75,8 +78,9 @@
           Evaluated effectiveness of AutoML products such as DataRobot.
         </li>
         <li>Wrangled local Ubuntu environments to get them to work with CUDA until NVIDIA backordered A100s slated to arrive. 
-            Did some evaluations of speech-to-text systems with this setup, using the national speech corpus as source for validation. 
-            This required transformation of the nsc transcripts to a system-readable format,  and a simple word error rate checker to evaluate machine output against source, which I did with Python.
+            Did some evaluations of speech-to-text systems with this setup, using the National Speech Corpus as source for validation. 
+            This required transformation of the NSC transcripts to a system-readable format,  
+            and a simple word error rate checker to evaluate machine output against source, which I did with Python.
         </li>
         <li>Built some Flask web apps and extended open source NLP packages to do <i>stuff</i>.
         </li>
